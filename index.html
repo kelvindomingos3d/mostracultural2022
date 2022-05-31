@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="textoemcima">Mostra Cultural</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.divide{
+    display: grid;
+    grid-template-columns: calc(50vw) calc(50vw);
+    width: 100vw;
+    height: 100vh;
+   
+}
+.altera{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(65, 224, 208);
+   
+  
+}
+.site{
+    
+    width: 100%;
+    height: 100%;
+   
+}
+    p,h1,input{
+  margin-top: 10px;      
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size:x-large
+    }
+
+    h1{font-size: 25px;}
+
+    img{
+        display: block;
+        max-width: 100%;
+    }
+    button{
+        padding: 5px ;
+    width: 200px;
+    background-color: rgb(16, 83, 109);
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+  margin:  auto auto;
+    font-size: medium;
+     }
+
+
+    </style>
+</head>
+<body>
+    <section class="divide">
+
+        <div class="altera">
+            <h1 style="text-align: center;">Vamos montar um site Juntos</h1>
+            <p>Vamos apresentar as principais TAGs utilizadas para a criação de um site</p>
+            <p> <strong>H1</strong> <br> representa a maior e mais importante informação ou título</p>
+            
+            <input type="text" name="" id="h1">
+            <p><strong>P</strong> <br> Tag que cria o parágrafo, ou texto normal do seu site</p>
+            <input type="text" name="" id="p">
+
+            <p><strong>background-color</strong><br> é a TAG para mudar a cor de fundo.</p>
+            <input type="color" name="" id="cor">
+
+            <p><strong>color</strong><br> é a TAG para mudar a cor da letra.</p>
+            <input type="color" name="" id="corletra">
+         
+            <p><strong>IMG</strong> <br>
+                Para colocar imagens usamos a Tag img, coloque o link de uma imagem abaixo:</p>
+            <input type="text" name="" id="linkimagem">
+
+            <p><strong>alert()</strong>  Utilizamos para aparecer um alerta, digite a mensagem que você quer que apareça ao cliente quando entrar em seu site. </p>
+            <input type="text" name="" id="alert">
+
+            <p><strong> title</strong> <br> Escolhe qual o texto que aparecera na aba de navegação.</p>
+            <input type="text" name="" id="tituloaba">
+            <p id="centraliza"><button onclick="alterar()">alterar</button></p>
+         
+            
+            
+
+
+
+        </div>
+
+        <div class="site" id="mudaCor">
+            <p > <strong id="mudaTexto">Título </strong> </p>
+            <p ><strong id="mudaParagrafo">Parágrafo</strong> </p>
+            <img id="trocaimg" style="margin: auto auto;" src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-camera-icon-png-image_926156.jpg" alt="">
+
+        </div>
+    </section>
+
+    <script>
+        function alterar(){
+
+        var alerta= document.getElementById("alert").value;
+        alert(alerta);
+
+        var tituloaba= document.getElementById("tituloaba").value;
+          document.getElementById("textoemcima").innerHTML=tituloaba;
+
+          var titulo= document.getElementById("h1").value;
+          document.getElementById("mudaTexto").innerHTML=titulo.toUpperCase();
+
+          var paragrafo= document.getElementById("p").value;
+          document.getElementById("mudaParagrafo").innerHTML=paragrafo;
+         
+          var cor= document.getElementById("cor").value;
+          document.getElementById("mudaCor").style.backgroundColor=cor;
+          var corletra= document.getElementById("corletra").value;
+          document.getElementById("mudaCor").style.color=corletra;
+
+          var link= document.getElementById("linkimagem").value;
+          document.getElementById("trocaimg").src= link;
+            
+           
+         
+        }
+    </script>
+</body>
+</html>
